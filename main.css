@@ -1,0 +1,19 @@
+table {
+    border-collapse: collapse;
+}
+
+tbody {
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+}
+
+td {
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    width: 50px;
+    height: 50px;
+}
+
+td.covered {
+    background: radial-gradient(tan, brown);
+}
