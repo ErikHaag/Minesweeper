@@ -2,12 +2,40 @@ table {
     border-collapse: collapse;
 }
 
-tbody {
+tbody#controls>tr>td{
+    padding: 3px;
+}
+
+tbody#cluePattern {
     border-bottom: 1px solid black;
     border-left: 1px solid black;
 }
 
-td {
+tbody#cluePattern td {
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    width: 10px;
+    height: 10px;
+}
+
+tbody#cluePattern td.center {
+    background-color: green;
+}
+
+tbody#cluePattern td.counted {
+    background-color: aqua;
+}
+
+tbody#cluePattern td.uncounted {
+    background-color: white;
+}
+
+tbody#board {
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+}
+
+tbody#board td {
     border-top: 1px solid black;
     border-right: 1px solid black;
     width: 50px;

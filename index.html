@@ -8,12 +8,37 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 </head>
 <body>
-    <select id="mode">
+    <table>
+        <tbody id="controls">
+            <tr>
+                <td>
+                    <label for="mode">clue mode:</label>
+                    <select id="mode">
+                </td>
+                <td>
+                    <table>
+                        <caption>Clue Pattern</caption>
+                        <tbody id="cluePattern"></tbody>
+                    </table>
+                </td>
+                <td>
+                    <label for="width">Width</label>
+                    <input id="width" type="number" value="20"><br>
+                    <label for="height">Height</label>
+                    <input id="height" type="number" value="10">
+                </td>
+                <td>
+                    <button id="start">Start</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     </select>
     <table>
         <tbody id="board">
         </tbody>
     </table>
 </body>
+<script src='misc.js'></script>
 <script src='main.js'></script>
  </html>
