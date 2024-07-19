@@ -2,6 +2,7 @@ const modeSelector = document.getElementById("mode");
 const clueTable = document.getElementById("cluePattern");
 const widthInput = document.getElementById("width");
 const heightInput = document.getElementById("height");
+const coverageInput = document.getElementById("coverage");
 const start = document.getElementById("start");
 const table = document.getElementById("board");
 
@@ -31,6 +32,13 @@ heightInput.addEventListener("focusout", () => {
     heightInput.value = v;
 });
 
+coverageInput.addEventListener("focusout", () => {
+    let v = BigInt(Math.floor(coverageInput.value));
+    if (v < 5n) v = 5n;
+    if (v > 90n) v = 90n;
+    coverageInput.value = v;
+});
+
 start.addEventListener("click", () => {
     mode = modeSelector.value;
     width = BigInt(widthInput.value);
@@ -40,7 +48,7 @@ start.addEventListener("click", () => {
     uncoverQueue = [];
     uncovered = 0n;
     flags = 0n;
-    generateMines();
+    generateMines(BigInt(coverageInput.value));
     generateClues();
     drawGrid();
 });
